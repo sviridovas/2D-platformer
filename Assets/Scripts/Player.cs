@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        // _bodyCollider2D = GetComponent<CapsuleCollider2D>();
+        _bodyCollider2D = GetComponent<CapsuleCollider2D>();
         _feetCollider2D = GetComponent<BoxCollider2D>();
         gravityScale = _rigidbody.gravityScale;
     }
@@ -87,12 +87,12 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        if(_bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+        if(_bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")))
         {
             isDead = true;
             _animator.SetTrigger("Die");
             _rigidbody.velocity = deathKick;
-            // FindObjectOfType<GameSession>().ProcessPlayerDeath();
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }

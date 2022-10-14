@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Ladders
+  - Player
+  - Background
+  - Enemy
+  - Hazards
+  - Pickups
   - 
   - 
   - 
@@ -40,4 +40,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 960300795
+    locked: 0
+  - name: Water
+    uniqueID: 2889170039
+    locked: 0
+  - name: Ladders
+    uniqueID: 1403558213
+    locked: 0
+  - name: Enemy
+    uniqueID: 2751865539
+    locked: 0
+  - name: Hazards
+    uniqueID: 1394954519
+    locked: 0
+  - name: Pickups
+    uniqueID: 1466626779
+    locked: 0
+  - name: Player
+    uniqueID: 2112259777
+    locked: 0
+  - name: Foreground
+    uniqueID: 3098605887
     locked: 0
